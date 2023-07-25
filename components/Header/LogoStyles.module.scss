@@ -1,0 +1,34 @@
+@import "@/scss/variables.scss";
+
+.logoWrap {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 13px;
+    height: 39px;
+    background-color: transparent;
+    color: white;
+    align-items: center;
+
+    .logo {
+        width: 39px;
+        grid-area: 1 / 1 / 3 / 2;
+    }
+
+    .logoName {
+        color: inherit;
+        grid-area: 1 / 2 / 2 / 3;
+        width: 114.334px;
+        height: 23.305px;
+    }
+
+    .logoLabel {
+        grid-area: 2 / 2 / 3 / 3;
+        color: $text;
+        font-family: $logo-font;
+        font-size: 7.965px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: inherit;
+    }
+}

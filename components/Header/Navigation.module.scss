@@ -1,0 +1,23 @@
+@import "@/scss/variables.scss";
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    color: white;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.28px;
+    text-transform: capitalize;
+
+    & > .activeLink {
+        color: $text-accent;
+    }
+
+    & > .link {
+        color: white;
+    }
+}

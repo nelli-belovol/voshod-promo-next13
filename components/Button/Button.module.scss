@@ -1,0 +1,15 @@
+.button {
+    display: flex;
+    padding: 10px 25px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    border-radius: 2px;
+    border: 2px solid white;
+    box-shadow: 0px 0px 10px 0px rgba(55, 73, 96, 0.25);
+}
+
+.transparent {
+    background-color: transparent;
+}
