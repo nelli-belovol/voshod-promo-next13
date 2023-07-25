@@ -1,0 +1,63 @@
+@import "@/scss/variables.scss";
+
+.stepsWrap {
+    padding-top: 260px;
+    padding-bottom: 95px;
+
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 400px);
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    justify-items: stretch;
+    align-items: stretch;
+    gap: 140px 100px;
+
+    & > li {
+        position: relative;
+        color: $text;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.4px;
+
+        h3 {
+            text-transform: uppercase;
+            position: relative;
+            max-width: 400px;
+            margin-bottom: 10px;
+            & > span {
+                position: inherit;
+                z-index: 10;
+            }
+
+            & > .step {
+                position: absolute;
+                top: -170px;
+                right: 0;
+                z-index: 9;
+                color: $grey-3;
+                text-align: right;
+                font-size: 220px;
+                font-weight: 700;
+                letter-spacing: 2.2px;
+                text-transform: uppercase;
+            }
+        }
+
+        & > p {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.4;
+            letter-spacing: 0.16px;
+            max-width: 400px;
+        }
+
+        & > svg {
+            position: absolute;
+            top: 65%;
+            left: 0;
+        }
+    }
+}
