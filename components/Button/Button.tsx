@@ -22,6 +22,9 @@ const Button = ({ color, onClick, text, borderColor, icon: Icon }: Props) => {
         [styles.black]: color == 'black',
         [styles.white]: color == 'white',
         [styles.transparent]: color == 'transparent',
+        [styles.borderRed]: (borderColor = 'red'),
+        [styles.borderBlack]: (borderColor = 'black'),
+        [styles.borderWhite]: (borderColor = 'white'),
       })}
     >
       <span>{text}</span>
