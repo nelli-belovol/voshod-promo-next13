@@ -1,0 +1,59 @@
+@import "@/scss/variables.scss";
+
+.contactsWrap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    color: white;
+    background-image: url("../../assets/images/contactsBg.png");
+    .contactBlock {
+        padding: 160px 60px 30px 160px;
+        width: 43%;
+        & > h2 {
+            &::after {
+                content: "";
+                display: block;
+                height: 6px;
+                width: 100%;
+                background-color: $text-accent;
+                margin: 15px 0 80px;
+            }
+        }
+        .contactInfo {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+
+            h3 {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 1.3;
+                letter-spacing: 0.48px;
+                text-transform: uppercase;
+                margin-bottom: 15px;
+            }
+            .contactInfoBlock {
+                & > p {
+                    margin-bottom: 10px;
+                }
+            }
+            .contactInfoHeader {
+                display: flex;
+                gap: 20px;
+            }
+        }
+    }
+
+    .socials {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+        margin-top: 89px;
+    }
+}
