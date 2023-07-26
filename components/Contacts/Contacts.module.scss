@@ -6,9 +6,10 @@
     width: 100%;
 
     color: white;
+    background-size: cover;
     background-image: url("../../assets/images/contactsBg.png");
     .contactBlock {
-        padding: 160px 60px 30px 160px;
+        padding: 160px 60px 180px 160px;
         width: 43%;
         & > h2 {
             &::after {

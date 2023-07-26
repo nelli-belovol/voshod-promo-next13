@@ -1,0 +1,31 @@
+.footer {
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 17px;
+    background-color: transparent;
+    color: #babcbf;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 20px;
+    z-index: 100000;
+
+    .name {
+        text-transform: uppercase;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        .linkUnderscore {
+            color: #babcbf;
+            text-decoration-line: underline;
+        }
+    }
+}
