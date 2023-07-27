@@ -76,7 +76,7 @@ const ContactForm = () => {
         error={errors.comment}
       />
 
-      <Button borderColor="red" color="white" className={styles.buttonSubmit} type="submit">
+      <Button borderColor="black" color="white" className={styles.buttonSubmit} type="submit">
         Отправить
       </Button>
     </form>

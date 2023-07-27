@@ -4,7 +4,6 @@ import React from 'react'
 
 import styles from './Contacts.module.scss'
 import classNames from 'classnames'
-import Map from '@/components/Map/Map'
 import GeolacationSvg from '@/assets/icons/geolocation.svg'
 import TimeSvg from '@/assets/icons/clock.svg'
 import PhoneSvg from '@/assets/icons/phone.svg'
@@ -12,6 +11,11 @@ import VkSvg from '@/assets/icons/vk.svg'
 import WhatsApp from '@/assets/icons/whatsapp.svg'
 import TelegramSvg from '@/assets/icons/telegram.svg'
 import ContactForm from './ContactForm'
+import dynamic from 'next/dynamic'
+
+const Map = dynamic(() => import('@/components/Map/Map'), {
+  ssr: false,
+})
 
 const Contacts = () => {
   return (

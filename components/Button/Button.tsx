@@ -14,7 +14,7 @@ interface Props
   borderColor: 'red' | 'black' | 'white'
   icon?: React.FC<React.SVGProps<SVGSVGElement>>
   children: ReactNode
-  styleColor: 'light' | 'dark'
+  styleColor?: 'light' | 'dark'
 }
 
 const Button = ({ styleColor, color, borderColor, icon: Icon, children, className, ...props }: Props) => {
@@ -32,7 +32,7 @@ const Button = ({ styleColor, color, borderColor, icon: Icon, children, classNam
       {...props}
     >
       <span> {children}</span>
-      {Icon && <Icon stroke={styleColor === 'light' ? 'white' : '#222222'} />}
+      {styleColor && Icon && <Icon stroke={styleColor === 'light' ? 'white' : '#222222'} />}
     </button>
   )
 }
