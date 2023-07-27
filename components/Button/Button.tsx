@@ -1,23 +1,25 @@
 'use client'
 
 import Image from 'next/image'
-import React from 'react'
+import React, { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from 'react'
 import cn from 'classnames'
 import styles from './Button.module.scss'
 
-type Props = {
+interface Props
+  extends Omit<
+    DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>,
+    'onAnimationStart' | 'onDragStart' | 'onDragEnd' | 'onDrag' | 'ref'
+  > {
   color: 'white' | 'red' | 'black' | 'transparent'
-  text: string
-  onClick: () => void
   borderColor: 'red' | 'black' | 'white'
   icon?: React.FC<React.SVGProps<SVGSVGElement>>
+  children: ReactNode
 }
 
-const Button = ({ color, onClick, text, borderColor, icon: Icon }: Props) => {
+const Button = ({ color, borderColor, icon: Icon, children, className, ...props }: Props) => {
   return (
     <button
-      onClick={onClick}
-      className={cn(styles.button, {
+      className={cn(styles.button, className, {
         [styles.red]: color == 'red',
         [styles.black]: color == 'black',
         [styles.white]: color == 'white',
@@ -26,8 +28,9 @@ const Button = ({ color, onClick, text, borderColor, icon: Icon }: Props) => {
         [styles.borderBlack]: (borderColor = 'black'),
         [styles.borderWhite]: (borderColor = 'white'),
       })}
+      {...props}
     >
-      <span>{text}</span>
+      <span> {children}</span>
       {Icon && <Icon stroke="white" />}
     </button>
   )

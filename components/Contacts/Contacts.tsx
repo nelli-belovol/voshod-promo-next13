@@ -11,6 +11,7 @@ import PhoneSvg from '@/assets/icons/phone.svg'
 import VkSvg from '@/assets/icons/vk.svg'
 import WhatsApp from '@/assets/icons/whatsapp.svg'
 import TelegramSvg from '@/assets/icons/telegram.svg'
+import ContactForm from './ContactForm'
 
 const Contacts = () => {
   return (
@@ -30,7 +31,6 @@ const Contacts = () => {
 
           <div className={styles.contactInfoBlock}>
             <div className={styles.contactInfoHeader}>
-              {' '}
               <TimeSvg />
               <h3>Время работы</h3>
             </div>
@@ -40,7 +40,6 @@ const Contacts = () => {
 
           <div className={styles.contactInfoBlock}>
             <div className={styles.contactInfoHeader}>
-              {' '}
               <PhoneSvg />
               <h3>Телефон</h3>
             </div>
@@ -56,6 +55,8 @@ const Contacts = () => {
         </div>
       </div>
       <Map />
+
+      <ContactForm />
     </div>
   )
 }
