@@ -8,7 +8,6 @@ import { format } from 'date-fns'
 
 const Footer = () => {
   const pathname = usePathname()
-  console.log(pathname)
 
   return (
     <div

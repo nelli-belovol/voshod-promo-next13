@@ -50,7 +50,9 @@ const CarCard = ({ name, code, text1, text2, addLinkText, tags, price }: Props) 
         )}
       </div>
 
-      <Button borderColor="red" color="white" onClick={handleReservate} text="Забронировать" />
+      <Button borderColor="red" color="white" onClick={handleReservate}>
+        Забронировать
+      </Button>
     </div>
   )
 }

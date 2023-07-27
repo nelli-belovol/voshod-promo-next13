@@ -12,9 +12,10 @@ type NavLink = {
 
 type Props = {
   navLinks: NavLink[]
+  styleColor: 'light' | 'dark' // Assuming 'light' or 'dark' style is used
 }
 
-const Navigation = ({ navLinks }: Props) => {
+const Navigation = ({ navLinks, styleColor }: Props) => {
   const pathname = usePathname()
 
   return (
@@ -22,7 +23,12 @@ const Navigation = ({ navLinks }: Props) => {
       {navLinks.map(link => {
         const isActive = pathname === link.href
         return (
-          <Link href={link.href} key={link.label} className={isActive ? styles.activeLink : styles.link}>
+          <Link
+            style={{ color: styleColor === 'light' ? 'white' : '#222222' }}
+            href={link.href}
+            key={link.label}
+            className={isActive ? styles.activeLink : styles.link}
+          >
             {link.label}
           </Link>
         )
