@@ -10,22 +10,49 @@
         border-radius: 50%;
         width: 40px;
         height: 40px;
-        border: 2px solid white;
         box-shadow: 0px 0px 10px 0px rgba(55, 73, 96, 0.25);
         background-color: transparent;
         color: white;
         display: flex;
         justify-content: center;
         align-items: center;
-        &:hover,
-        &:focus {
-            border: 2px solid $text-accent;
-            & * {
-                stroke: $text-accent;
-            }
-        }
+    }
 
-        & * {
+    .lightThemeBtn {
+        border: 2px solid #e7e7e8;
+        background: transparent;
+
+        & > svg {
+            stroke: white;
+        }
+    }
+
+    .lightThemeBtn:hover,
+    .lightThemeBtn:focus {
+        border: 2px solid white;
+        background: white;
+
+        & > svg {
+            stroke: $text;
+            fill: white;
+        }
+    }
+
+    .darkThemeBtn {
+        border: 2px solid white;
+        background: transparent;
+
+        & > svg {
+            stroke: $text;
+        }
+    }
+
+    .darkThemeBtn:hover,
+    .darkThemeBtn:focus {
+        border: 2px solid $text;
+        background: $text;
+
+        & > svg {
             stroke: white;
         }
     }
