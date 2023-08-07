@@ -5,10 +5,11 @@ import Logo from './Logo'
 import Navigation from './Navigation'
 import styles from './HeaderStyles.module.scss'
 import ProfileCallButtonContainer from './ProfileCallButtonContainer'
+import { usePathname } from 'next/navigation'
 
 const navItems = [
   { href: '/', label: 'Главная' },
-  { href: '/catalog', label: 'Каталог' },
+  { href: '/catalogue', label: 'Каталог' },
   { href: '/programs', label: 'Программы' },
   { href: '/questions', label: 'Вопросы' },
   { href: '/rent', label: 'Аренда' },
@@ -16,6 +17,7 @@ const navItems = [
 ]
 
 const Header = () => {
+  const pathname = usePathname();
   const [scrolling, setScrolling] = useState(false)
 
   useEffect(() => {
@@ -34,13 +36,13 @@ const Header = () => {
     <div
       className={styles.headerWrap}
       style={{
-        background: scrolling ? 'white' : 'transparent',
-        boxShadow: scrolling ? '0px 5px 20px 0px rgba(0, 0, 0, 0.07)' : 'none',
+        background: pathname !== "/" || scrolling ? 'white' : 'transparent',
+        boxShadow: pathname !== "/" || scrolling ? '0px 5px 20px 0px rgba(0, 0, 0, 0.07)' : 'none',
       }}
     >
-      <Logo styleColor={scrolling ? 'dark' : 'light'} />
-      <Navigation navLinks={navItems} styleColor={scrolling ? 'dark' : 'light'} />
-      <ProfileCallButtonContainer styleColor={scrolling ? 'dark' : 'light'} />
+      <Logo styleColor={pathname !== "/" || scrolling ? 'dark' : 'light'} />
+      <Navigation navLinks={navItems} styleColor={pathname !== "/" || scrolling ? 'dark' : 'light'} />
+      <ProfileCallButtonContainer styleColor={pathname !== "/" || scrolling ? 'dark' : 'light'} />
     </div>
   )
 }

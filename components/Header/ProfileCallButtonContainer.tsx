@@ -1,24 +1,26 @@
+'use client'
+
 import Image from 'next/image'
-import React from 'react'
+import React, { useCallback, useState } from 'react'
 import ProfileSvg from '@/assets/icons/profile.svg'
 import Button from '../Button/Button'
 import styles from './ProfileCallButtonContainer.module.scss'
 import ArrowRightSvg from '@/assets/icons/arrowRight.svg'
 import classNames from 'classnames'
+import useLoginModal from '@/hooks/useLoginModal'
 
 const ProfileCallButtonContainer = ({ styleColor }: { styleColor: 'light' | 'dark' }) => {
-  const logoStyle = {
-    fill: styleColor === 'light' ? 'transparent' : '#222222',
-  }
+  const [isOpen, setIsOpen] = useState(false)
+  const loginModal = useLoginModal()
 
-  const logoWrapStyle = {
-    border: '2px solid var(--grey-3, #E7E7E8)',
-    boxShadow: '0px 0px 10px 0px rgba(55, 73, 96, 0.25)',
-  }
+  const toggleOpen = useCallback(() => {
+    setIsOpen(value => !value)
+  }, [])
 
   return (
     <div className={styles.profileWrap}>
       <div
+        onClick={toggleOpen}
         className={classNames(styles.profileBtn, {
           [styles.lightThemeBtn]: styleColor === 'light',
           [styles.darkThemeBtn]: styleColor === 'dark',
@@ -34,11 +36,19 @@ const ProfileCallButtonContainer = ({ styleColor }: { styleColor: 'light' | 'dar
         }}
         color="transparent"
         borderColor={'white'}
-        onClick={() => {}}
+        onClick={() => { }}
         icon={ArrowRightSvg}
       >
         Заказать звонок
       </Button>
+
+      {isOpen && (
+        <div className={styles.userMenu}>
+          <div onClick={loginModal.onOpen} className={styles.userEnter}>
+            Вход в Личный кабинет
+          </div>
+        </div>
+      )}
     </div>
   )
 }

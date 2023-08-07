@@ -4,6 +4,7 @@ import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import styles from './Navigation.module.scss'
+import classNames from 'classnames'
 
 type NavLink = {
   label: string
@@ -24,10 +25,10 @@ const Navigation = ({ navLinks, styleColor }: Props) => {
         const isActive = pathname === link.href
         return (
           <Link
-            style={{ color: styleColor === 'light' ? 'white' : '#222222' }}
+            style={{ color: isActive ? "#bf3535" : styleColor === 'dark' ? "#222222" : "white" }}
             href={link.href}
             key={link.label}
-            className={isActive ? styles.activeLink : styles.link}
+            className={classNames(styles.link)}
           >
             {link.label}
           </Link>

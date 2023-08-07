@@ -1,0 +1,1 @@
+export const marks = ["Chery", "Kia", "Geely", "BMW", "Huyndai", "Toyota", "Skoda", "Mersedes-Benz"]
