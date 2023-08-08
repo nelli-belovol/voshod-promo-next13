@@ -1,0 +1,34 @@
+.notificationWrap {
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 2px;
+    border: 1px solid rgba(191, 53, 53, 0.5);
+    background: #fff;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+
+    position: relative;
+
+    & > svg {
+        flex-shrink: 0;
+    }
+
+    & > p {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: 0.14px;
+        margin-left: 20px;
+
+        & > a {
+            color: #bf3535;
+        }
+    }
+
+    .closeIcon {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+    }
+}

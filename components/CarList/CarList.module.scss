@@ -1,0 +1,10 @@
+.carList {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fill, 335px);
+    justify-items: stretch;
+    align-items: stretch;
+    gap: 20px;
+    width: 100%;
+    margin-top: 30px;
+}

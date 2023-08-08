@@ -6,7 +6,10 @@ import React, { useState } from 'react'
 
 const Catalogue = () => {
   return (
-    <div className="section">
+    <div
+      className="section"
+      style={{ display: 'flex', flexDirection: 'row', gap: '40px', paddingBottom: '100px', paddingTop: '120px' }}
+    >
       <Filters />
       <CarList />
     </div>
