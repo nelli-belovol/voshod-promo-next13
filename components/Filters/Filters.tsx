@@ -105,7 +105,7 @@ const Filters = () => {
             <span>Все</span>
           </li>
           {marks.map(mark => (
-            <li key={mark}>
+            <li key={`mark ${mark}`}>
               <input
                 type="checkbox"
                 onChange={handleMarkCheckboxChange}
@@ -125,7 +125,7 @@ const Filters = () => {
           Модель <ArrowUpSvg />
         </p>
         <ul className={styles.list}>
-          <li key="allMModels">
+          <li key="allModels">
             <input
               type="checkbox"
               onChange={handleMarkCheckboxChange}
@@ -135,11 +135,11 @@ const Filters = () => {
             <span>Все</span>
           </li>
           {models.map(model => (
-            <>
+            <div key={`model ${model.modelName}`}>
               <p>{model.modelName}</p>
-              <ul key={model.modelName} className={styles.list}>
-                {model.modelsType.map(modelType => (
-                  <li key={modelType}>
+              <ul className={styles.list}>
+                {model.modelsType.map((modelType, idx) => (
+                  <li key={`modelType ${modelType + idx}`}>
                     <input
                       type="checkbox"
                       onChange={handleMarkCheckboxChange}
@@ -150,7 +150,7 @@ const Filters = () => {
                   </li>
                 ))}
               </ul>
-            </>
+            </div>
           ))}
         </ul>
       </div>

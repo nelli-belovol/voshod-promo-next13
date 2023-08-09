@@ -110,5 +110,341 @@
                 ]
             }
         ]
+    },
+    {
+        "id": 5,
+        "name": "Toyota Camry",
+        "image": "../assets/images/toyotaCamry.png",
+        "price": 618950,
+        "tagCategories": [
+            {
+                "categoryName": "buying",
+                "tags": [
+                    "Лизинг до 7 лет",
+                    "Аванс 0%",
+                    "Гарантия 150 тыс. км"
+                ]
+            },
+            {
+                "categoryName": "rent",
+                "tags": [
+                    "Свободна"
+                ]
+            },
+            {
+                "categoryName": "comfortLevels",
+                "tags": [
+                    "Комфорт"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Toyota Camry",
+        "image": "../assets/images/toyotaCamry.png",
+        "price": 618950,
+        "tagCategories": [
+            {
+                "categoryName": "buying",
+                "tags": [
+                    "Лизинг до 7 лет",
+                    "Аванс 0%",
+                    "Гарантия 150 тыс. км"
+                ]
+            },
+            {
+                "categoryName": "rent",
+                "tags": [
+                    "Свободна"
+                ]
+            },
+            {
+                "categoryName": "comfortLevels",
+                "tags": [
+                    "Комфорт"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Toyota Camry",
+        "image": "../assets/images/toyotaCamry.png",
+        "price": 618950,
+        "tagCategories": [
+            {
+                "categoryName": "buying",
+                "tags": [
+                    "Лизинг до 7 лет",
+                    "Аванс 0%",
+                    "Гарантия 150 тыс. км"
+                ]
+            },
+            {
+                "categoryName": "rent",
+                "tags": [
+                    "Свободна"
+                ]
+            },
+            {
+                "categoryName": "comfortLevels",
+                "tags": [
+                    "Комфорт"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Toyota Camry",
+        "image": "../assets/images/toyotaCamry.png",
+        "price": 618950,
+        "tagCategories": [
+            {
+                "categoryName": "buying",
+                "tags": [
+                    "Лизинг до 7 лет",
+                    "Аванс 0%",
+                    "Гарантия 150 тыс. км"
+                ]
+            },
+            {
+                "categoryName": "rent",
+                "tags": [
+                    "Свободна"
+                ]
+            },
+            {
+                "categoryName": "comfortLevels",
+                "tags": [
+                    "Комфорт"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Toyota Camry",
+        "image": "../assets/images/toyotaCamry.png",
+        "price": 618950,
+        "tagCategories": [
+            {
+                "categoryName": "buying",
+                "tags": [
+                    "Лизинг до 7 лет",
+                    "Аванс 0%",
+                    "Гарантия 150 тыс. км"
+                ]
+            },
+            {
+                "categoryName": "rent",
+                "tags": [
+                    "Свободна"
+                ]
+            },
+            {
+                "categoryName": "comfortLevels",
+                "tags": [
+                    "Комфорт"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Toyota Camry",
+        "image": "../assets/images/toyotaCamry.png",
+        "price": 618950,
+        "tagCategories": [
+            {
+                "categoryName": "buying",
+                "tags": [
+                    "Лизинг до 7 лет",
+                    "Аванс 0%",
+                    "Гарантия 150 тыс. км"
+                ]
+            },
+            {
+                "categoryName": "rent",
+                "tags": [
+                    "Свободна"
+                ]
+            },
+            {
+                "categoryName": "comfortLevels",
+                "tags": [
+                    "Комфорт"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Toyota Camry",
+        "image": "../assets/images/toyotaCamry.png",
+        "price": 618950,
+        "tagCategories": [
+            {
+                "categoryName": "buying",
+                "tags": [
+                    "Лизинг до 7 лет",
+                    "Аванс 0%",
+                    "Гарантия 150 тыс. км"
+                ]
+            },
+            {
+                "categoryName": "rent",
+                "tags": [
+                    "Свободна"
+                ]
+            },
+            {
+                "categoryName": "comfortLevels",
+                "tags": [
+                    "Комфорт"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Toyota Camry",
+        "image": "../assets/images/toyotaCamry.png",
+        "price": 618950,
+        "tagCategories": [
+            {
+                "categoryName": "buying",
+                "tags": [
+                    "Лизинг до 7 лет",
+                    "Аванс 0%",
+                    "Гарантия 150 тыс. км"
+                ]
+            },
+            {
+                "categoryName": "rent",
+                "tags": [
+                    "Свободна"
+                ]
+            },
+            {
+                "categoryName": "comfortLevels",
+                "tags": [
+                    "Комфорт"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Toyota Camry",
+        "image": "../assets/images/toyotaCamry.png",
+        "price": 618950,
+        "tagCategories": [
+            {
+                "categoryName": "buying",
+                "tags": [
+                    "Лизинг до 7 лет",
+                    "Аванс 0%",
+                    "Гарантия 150 тыс. км"
+                ]
+            },
+            {
+                "categoryName": "rent",
+                "tags": [
+                    "Свободна"
+                ]
+            },
+            {
+                "categoryName": "comfortLevels",
+                "tags": [
+                    "Комфорт"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Toyota Camry",
+        "image": "../assets/images/toyotaCamry.png",
+        "price": 618950,
+        "tagCategories": [
+            {
+                "categoryName": "buying",
+                "tags": [
+                    "Лизинг до 7 лет",
+                    "Аванс 0%",
+                    "Гарантия 150 тыс. км"
+                ]
+            },
+            {
+                "categoryName": "rent",
+                "tags": [
+                    "Свободна"
+                ]
+            },
+            {
+                "categoryName": "comfortLevels",
+                "tags": [
+                    "Комфорт"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Toyota Camry",
+        "image": "../assets/images/toyotaCamry.png",
+        "price": 618950,
+        "tagCategories": [
+            {
+                "categoryName": "buying",
+                "tags": [
+                    "Лизинг до 7 лет",
+                    "Аванс 0%",
+                    "Гарантия 150 тыс. км"
+                ]
+            },
+            {
+                "categoryName": "rent",
+                "tags": [
+                    "Свободна"
+                ]
+            },
+            {
+                "categoryName": "comfortLevels",
+                "tags": [
+                    "Комфорт"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Toyota Camry",
+        "image": "../assets/images/toyotaCamry.png",
+        "price": 618950,
+        "tagCategories": [
+            {
+                "categoryName": "buying",
+                "tags": [
+                    "Лизинг до 7 лет",
+                    "Аванс 0%",
+                    "Гарантия 150 тыс. км"
+                ]
+            },
+            {
+                "categoryName": "rent",
+                "tags": [
+                    "Свободна"
+                ]
+            },
+            {
+                "categoryName": "comfortLevels",
+                "tags": [
+                    "Комфорт"
+                ]
+            }
+        ]
     }
 ]

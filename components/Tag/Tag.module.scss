@@ -14,7 +14,7 @@
     margin-right: 5px;
     margin-bottom: 5px;
     padding: 5px 15px;
-
+    cursor: pointer;
     text-align: center;
 }
 
@@ -29,4 +29,14 @@
 .busy {
     background: #e7e7e8;
     color: #606569;
+}
+
+.all {
+    border: 1.5px solid #bf3535;
+    color: #bf3535;
+}
+
+.filter {
+    background: #222;
+    color: white;
 }

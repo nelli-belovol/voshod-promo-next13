@@ -30,5 +30,14 @@
         position: absolute;
         top: -10px;
         right: -10px;
+        border-radius: 50%;
+        background-color: white;
+        fill: #babcbf;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            stroke: #bf3535;
+        }
     }
 }
