@@ -8,14 +8,20 @@ import styles from './ProfileCallButtonContainer.module.scss'
 import ArrowRightSvg from '@/assets/icons/arrowRight.svg'
 import classNames from 'classnames'
 import useLoginModal from '@/hooks/useLoginModal'
+import useCallMeModal from '@/hooks/useCallMeModal'
 
 const ProfileCallButtonContainer = ({ styleColor }: { styleColor: 'light' | 'dark' }) => {
+  const callMeModal = useCallMeModal()
   const [isOpen, setIsOpen] = useState(false)
   const loginModal = useLoginModal()
 
   const toggleOpen = useCallback(() => {
     setIsOpen(value => !value)
   }, [])
+
+  const handleClick = () => {
+    callMeModal.onOpen()
+  }
 
   return (
     <div className={styles.profileWrap}>
@@ -29,6 +35,10 @@ const ProfileCallButtonContainer = ({ styleColor }: { styleColor: 'light' | 'dar
         <ProfileSvg />
       </div>
       <Button
+        className={classNames({
+          [styles.lightAskCallBtn]: styleColor === 'light',
+          [styles.darkAskCallBtn]: styleColor === 'dark',
+        })}
         styleColor={styleColor}
         style={{
           color: styleColor === 'light' ? 'white' : '#222222',
@@ -36,7 +46,7 @@ const ProfileCallButtonContainer = ({ styleColor }: { styleColor: 'light' | 'dar
         }}
         color="transparent"
         borderColor={'white'}
-        onClick={() => { }}
+        onClick={handleClick}
         icon={ArrowRightSvg}
       >
         Заказать звонок

@@ -25,7 +25,6 @@ const ContactForm = () => {
     formState: { errors },
   } = useForm<IContactForm>()
   const [isSuccess, setIsSuccess] = useState<boolean>(false)
-  const [error, setError] = useState<string>()
 
   const onSubmit: SubmitHandler<IContactForm> = async (formData: IContactForm) => {
     setIsSuccess(true)
@@ -37,18 +36,18 @@ const ContactForm = () => {
       <Input
         type="text"
         placeholder="Имя"
-        {...register('lastName', {
+        {...register('name', {
           required: { value: true, message: 'Заполните имя' },
         })}
-        error={errors.lastName}
+        error={errors.name}
       />
       <Input
         type="text"
         placeholder="Фамилия"
-        {...register('email', {
+        {...register('lastName', {
           required: { value: true, message: 'Заполните фамилию' },
         })}
-        error={errors.email}
+        error={errors.lastName}
       />
       <Input
         type="phone"
@@ -76,7 +75,7 @@ const ContactForm = () => {
         error={errors.comment}
       />
 
-      <Button borderColor="black" color="white" className={styles.buttonSubmit} type="submit">
+      <Button borderColor="red" color="white" className={styles.buttonSubmit} type="submit">
         Отправить
       </Button>
     </form>

@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Footer from '@/components/Footer/Footer'
 import LoginModal from '@/components/Modals/LoginModal'
+import CallMeModal from '@/components/Modals/CallMeModal'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="container">{children}</main>
         <Footer />
         <LoginModal />
+        <CallMeModal />
       </body>
     </html>
   )

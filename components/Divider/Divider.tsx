@@ -1,10 +1,12 @@
-import React from 'react';
-import styles from "./Divider.module.scss"
+import React from 'react'
+import styles from './Divider.module.scss'
+import { DetailedHTMLProps, HTMLAttributes } from 'react'
+import classNames from 'classnames'
 
-const Divider = () => {
-    return (
-        <div className={styles.divider} />
-    );
-};
+export interface DividerProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 
-export default Divider;
+const Divider = ({ className, ...props }: DividerProps) => {
+  return <div className={classNames(styles.divider, className)} {...props} />
+}
+
+export default Divider

@@ -1,3 +1,4 @@
+@import "@/scss/variables.scss";
 .modalWrap {
     overflow: hidden;
     position: fixed;
@@ -10,26 +11,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 100;
-
-    // display: flex;
-    // overflow-y: auto;
-    // overflow-x: hidden;
-    // position: fixed;
-    // top: 0;
-    // right: 0;
-    // bottom: 0;
-    // left: 0;
-    // z-index: 50;
-    // justify-content: center;
-    // align-items: center;
-    // outline-style: none;
+    z-index: 100000;
 
     .modalContentWrap {
         position: relative;
         margin-top: 1.5rem;
         margin-bottom: 1.5rem;
         width: 70%;
+        height: 80%;
 
         .modalContent {
             height: 100%;
@@ -67,6 +56,7 @@
                         flex-direction: row;
                         align-items: center;
                         gap: 5px;
+                        cursor: pointer;
                     }
                     .title {
                         margin-top: 88px;
@@ -95,6 +85,22 @@
                         line-height: 1.4; /* 22.4px */
                         letter-spacing: 0.16px;
                     }
+                    & > form > div > span {
+                        position: absolute;
+                        bottom: 25px;
+                        right: 0px;
+                        left: auto;
+                        font-size: 10px;
+                        font-weight: 500;
+                        color: #bf3535;
+                    }
+
+                    .submitBtn {
+                        &:hover,
+                        &:focus {
+                            border-color: $text-accent;
+                        }
+                    }
                 }
                 .footer {
                 }
@@ -106,14 +112,61 @@
                     margin-top: 20px;
                     gap: 10px;
 
-                    & span {
+                    .checkboxLabel {
+                        display: inline-flex;
+                        align-items: center;
+                        align-self: center;
+                        flex-wrap: nowrap;
+                        font-size: 14px;
+                        &::before {
+                            content: "";
+                            display: inline-block;
+                            width: 16px;
+                            height: 16px;
+                            border: 2px solid $text;
+                            border-radius: 3px;
+                            margin-right: 8px;
+                            transition:
+                                background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                                border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                        }
+
+                        & a {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .acсeptCheckbox:checked + .checkboxLabel::before {
+                        background-image: url("../../assets/icons/checkboxVector.svg");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: contain;
+                        background-color: white;
+                        border: none;
+                        margin-right: 8px;
+                    }
+
+                    .acсeptCheckbox:focus + .checkboxLabel::before,
+                    .acсeptCheckbox:hover + .checkboxLabel::before {
+                        border: 2px solid $text-accent;
                         cursor: pointer;
-                        text-decoration: underline;
+                    }
+
+                    .notAcceptLabel {
+                        color: $text-accent;
+
+                        &::before {
+                            border: 2px solid $text-accent;
+                        }
                     }
                 }
             }
 
             .imageWrap {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-end;
                 padding: 30px 30px 30px 40px;
                 background-repeat: no-repeat;
                 background-size: cover;

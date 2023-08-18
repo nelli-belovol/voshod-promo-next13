@@ -59,6 +59,18 @@
         }
     }
 
+    .darkAskCallBtn {
+        & > svg > * {
+            stroke: $text;
+        }
+    }
+
+    .lightAskCallBtn {
+        & > svg > * {
+            stroke: white;
+        }
+    }
+
     .userMenu {
         position: absolute;
         top: 60px;

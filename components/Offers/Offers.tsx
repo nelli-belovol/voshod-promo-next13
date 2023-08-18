@@ -27,7 +27,7 @@ const Offers = () => {
         </Link>
       </div>
       <ul className={styles.carList}>
-        {cars.map(car => {
+        {cars.slice(0, 4).map(car => {
           const buyingTags = car.tagCategories.find(cat => cat.categoryName === 'buying')
           return (
             <li key={car.id}>
